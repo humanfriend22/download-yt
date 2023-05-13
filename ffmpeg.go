@@ -8,7 +8,7 @@ import (
 
 func IsFFmpegAvailable() bool {
 	err := exec.Command("ffmpeg").Run()
-	return err == nil
+	return err != nil
 }
 
 func FormatVideo(formatI int, final string) string {
